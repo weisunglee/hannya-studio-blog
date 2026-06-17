@@ -34,7 +34,9 @@ const homePath = getRelativeLocaleUrl(locale, "");
     class="app-layout"
   >
     <section id="hero" class="border-border border-b pt-8 pb-6">
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+      <h1
+        class="brand-title my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl"
+      >
         Hannya Studio
       </h1>
       <a
@@ -85,7 +87,8 @@ const homePath = getRelativeLocaleUrl(locale, "");
             { "border-border border-b": recentPosts.length > 0 },
           ]}
         >
-          <h2 class="text-2xl font-semibold tracking-wide">
+          <h2 class="flex items-center gap-2.5 text-2xl font-semibold tracking-wide">
+            <span class="bg-accent-2 inline-block h-6 w-1 rounded-full" aria-hidden="true"></span>
             {t.home.featured}
           </h2>
           <ul>
@@ -100,7 +103,8 @@ const homePath = getRelativeLocaleUrl(locale, "");
     {
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">
+          <h2 class="flex items-center gap-2.5 text-2xl font-semibold tracking-wide">
+            <span class="bg-accent inline-block h-6 w-1 rounded-full" aria-hidden="true"></span>
             {t.home.recentPosts}
           </h2>
           <ul>

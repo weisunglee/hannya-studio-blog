@@ -19,6 +19,26 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+  /* Soft depth: faint two-tone accent glow anchored to the top of the page.
+     Very low opacity so it reads as ambient light, not decoration. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        58rem 30rem at 16% -6%,
+        color-mix(in oklab, var(--accent) 16%, transparent),
+        transparent 68%
+      ),
+      radial-gradient(
+        46rem 26rem at 94% 2%,
+        color-mix(in oklab, var(--accent-2) 11%, transparent),
+        transparent 70%
+      );
+  }
 }
 
 @utility max-w-app {
@@ -31,6 +51,19 @@
 
 @utility active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-8;
+}
+
+/* Signature colour moment: brand name in a gentle teal -> clay gradient. */
+@utility brand-title {
+  background-image: linear-gradient(
+    105deg,
+    var(--accent) 10%,
+    var(--accent-2) 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 :target {

@@ -7,7 +7,9 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --color-accent-2: var(--accent-2);
+  --font-app: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-google-sans-code);
 }
 
 /* Light theme values */
@@ -15,19 +17,21 @@
 [data-theme="light"] {
   --background: #fdfdfd;
   --foreground: #282728;
-  --accent: #3d7ea6;
+  --accent: #2f8aa3;
   --accent-foreground: #ffffff;
+  --accent-2: #c2724a;
   --muted: #e6e6e6;
   --muted-foreground: #6b7280;
   --border: #ece9e9;
 }
 
-/* Dark theme values — Soft midnight (low-glare, muted accent) */
+/* Dark theme values — Soft slate + living teal, warm clay accent */
 [data-theme="dark"] {
   --background: #181b23;
   --foreground: #c7ccd6;
-  --accent: #7ea9c4;
-  --accent-foreground: #181b23;
+  --accent: #6fb6c4;
+  --accent-foreground: #12161c;
+  --accent-2: #d6a07f;
   --muted: #232833;
   --muted-foreground: #8a92a2;
   --border: #2b313d;
