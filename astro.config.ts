@@ -7,6 +7,8 @@ import {
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react";
+import keystatic from "@keystatic/astro";
 import { unified } from "@astrojs/markdown-remark";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
@@ -19,6 +21,11 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import config from "./astro-paper.config";
 
+// Keystatic (the CMS admin at /keystatic) only runs during local development.
+// `astro build` sets NODE_ENV=production, so the production site stays fully
+// static — no server adapter needed, deployment unchanged.
+const keystaticEnabled = process.env.NODE_ENV !== "production";
+
 export default defineConfig({
   site: config.site.url,
   integrations: [
@@ -27,6 +34,7 @@ export default defineConfig({
       filter: page =>
         config.features?.showArchives !== false || !page.endsWith("/archives/"),
     }),
+    ...(keystaticEnabled ? [react(), keystatic()] : []),
   ],
   i18n: {
     locales: ["zh-TW"],

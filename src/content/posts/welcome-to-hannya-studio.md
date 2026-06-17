@@ -2,7 +2,6 @@
 author: only26k
 pubDatetime: 2026-06-17T01:00:00Z
 title: 歡迎來到 Hannya Studio
-slug: welcome-to-hannya-studio
 featured: true
 draft: false
 tags:

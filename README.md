@@ -21,9 +21,8 @@ npm run preview  # 預覽 build 結果
    ```yaml
    ---
    author: only26k
-   pubDatetime: 2026-06-17T09:00:00Z
+   pubDatetime: 2026-06-17T01:00:00Z
    title: 文章標題
-   slug: my-post
    featured: false
    draft: false
    tags:
@@ -32,10 +31,27 @@ npm run preview  # 預覽 build 結果
    ---
    ```
 
+   > 檔名就是網址:`my-post.md` → `/posts/my-post/`。
+
 3. 用 Markdown 寫內容。
 4. `git push` 後,Cloudflare Pages 會自動建置並上線。
 
 小技巧:`draft: true` 為草稿(不公開);`featured: true` 會出現在首頁精選區。
+
+## 用 Keystatic 後台寫文章(推薦)
+
+不想手寫 frontmatter 的話,專案內建 [Keystatic](https://keystatic.com/) 視覺化後台(本機模式):
+
+```bash
+npm run dev        # 啟動後
+# 瀏覽器打開 http://localhost:4321/keystatic
+```
+
+在後台填表單寫文章,儲存時會直接寫成 `src/content/posts/*.md`,接著 `git push` 即可上線。
+
+- 後台**只在本機開發時啟用**;正式部署(Cloudflare)維持純靜態,不受影響。
+- 在另一台裝置使用:clone repo → `npm install` → `npm run dev` → 開 `/keystatic` 即可。
+- 設定檔在 `keystatic.config.ts`。
 
 ## 設定
 
