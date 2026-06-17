@@ -5,9 +5,8 @@ const DARK = "dark";
 function getPreferredTheme(): string {
   const stored = localStorage.getItem(THEME_KEY);
   if (stored) return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? DARK
-    : LIGHT;
+  // Default to dark unless the visitor has explicitly chosen a theme.
+  return DARK;
 }
 
 // Reuse the value already set by the inline FOUC-prevention script if available.
