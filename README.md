@@ -40,7 +40,7 @@ npm run preview  # 預覽 build 結果
 
 ## 用 Keystatic 後台寫文章(推薦)
 
-不想手寫 frontmatter 的話,專案內建 [Keystatic](https://keystatic.com/) 視覺化後台(本機模式):
+不想手寫 frontmatter 的話,專案內建 [Keystatic](https://keystatic.com/) 視覺化後台(本機 local 模式):
 
 ```bash
 npm run dev        # 啟動後
@@ -50,8 +50,36 @@ npm run dev        # 啟動後
 在後台填表單寫文章,儲存時會直接寫成 `src/content/posts/*.md`,接著 `git push` 即可上線。
 
 - 後台**只在本機開發時啟用**;正式部署(Cloudflare)維持純靜態,不受影響。
-- 在另一台裝置使用:clone repo → `npm install` → `npm run dev` → 開 `/keystatic` 即可。
 - 設定檔在 `keystatic.config.ts`。
+
+### 在另一台裝置寫文章
+
+Keystatic 是 local 模式,所以在哪台電腦寫,就要先在那台把環境準備好(這台需要裝
+[Node.js 22.12+](https://nodejs.org/) 與 git):
+
+```bash
+# 1. 把 repo 抓下來
+git clone https://github.com/weisunglee/hannya-studio-blog.git
+cd hannya-studio-blog
+
+# 2. 裝相依套件
+npm install
+
+# 3. 啟動後台
+npm run dev
+# 瀏覽器開 http://localhost:4321/keystatic 寫文章
+
+# 4. 寫完存檔後,把變更推上去 → Cloudflare 自動部署
+git add -A
+git commit -m "新文章:標題"
+git push
+```
+
+> 下次在同一台電腦再寫時,只要 `git pull`(同步最新)→ `npm run dev` 即可,不必重新 clone。
+
+> Keystatic local 模式是「在你自己的電腦上編輯本機檔案」,不是雲端後台 —— 所以一定要先有
+> repo 與環境。若之後想「打開瀏覽器就能線上編輯、不必 clone」,需要改用 Keystatic 的
+> GitHub 模式(要加 Cloudflare SSR adapter + 設定 GitHub App 授權)。
 
 ## 設定
 
