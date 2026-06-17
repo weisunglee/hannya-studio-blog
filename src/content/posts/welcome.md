@@ -1,15 +1,15 @@
 ---
 author: only26k
 pubDatetime: 2026-06-17T01:00:00Z
-title: 歡迎來到 Hannya Studio
+title: 歡迎來到 only26k 的部落格
 featured: true
 draft: false
 tags:
   - 公告
-description: "Hannya Studio 部落格正式啟用,這篇文章說明這裡會寫些什麼,以及如何新增文章。"
+description: "部落格正式啟用,這篇文章說明這裡會寫些什麼,以及如何新增文章。"
 ---
 
-這是 **Hannya Studio** 的第一篇文章 🎉
+這是這個部落格的第一篇文章 🎉
 
 這個部落格用 [Astro](https://astro.build/) 搭配 [AstroPaper](https://github.com/satnaing/astro-paper) 主題建置,程式碼放在 GitHub,透過 Cloudflare Pages 自動部署。
 

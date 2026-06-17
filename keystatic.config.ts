@@ -6,7 +6,7 @@ import { config, fields, collection } from "@keystatic/core";
 export default config({
   storage: { kind: "local" },
   ui: {
-    brand: { name: "Hannya Studio" },
+    brand: { name: "only26k's blog" },
   },
   collections: {
     posts: collection({

@@ -3,7 +3,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://blog.only26k.com/",
-    title: "Hannya Studio",
+    title: "only26k's blog",
     description: "only26k 的部落格 — 技術筆記、專案紀錄與雜談。",
     author: "only26k",
     profile: "https://github.com/weisunglee",

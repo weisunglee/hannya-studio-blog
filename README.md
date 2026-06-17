@@ -1,4 +1,4 @@
-# Hannya Studio Blog
+# only26k's blog
 
 only26k 的個人部落格,用 [Astro](https://astro.build/) + [AstroPaper](https://github.com/satnaing/astro-paper) 主題建置,透過 Cloudflare Pages 自動部署到 <https://blog.only26k.com>。
 
