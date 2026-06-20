@@ -29,7 +29,11 @@ export default defineAstroPaperConfig({
     search: "pagefind",
   },
   socials: [
-    { name: "github", url: "https://github.com/weisunglee" },
+    {
+      name: "linktree-icon",
+      url: "https://linktr.ee/only26k",
+      linkTitle: "only26k on Linktree",
+    },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
