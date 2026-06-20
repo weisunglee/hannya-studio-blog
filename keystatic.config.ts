@@ -57,6 +57,17 @@ export default config({
         content: fields.markdoc({
           label: "內文",
           extension: "md",
+          options: {
+            image: {
+              directory: "public/images/posts",
+              publicPath: "/images/posts",
+              transformFilename: filename =>
+                filename
+                  .toLowerCase()
+                  .replace(/\s+/g, "-")
+                  .replace(/[^a-z0-9._-]/g, ""),
+            },
+          },
         }),
       },
     }),
