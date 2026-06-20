@@ -1,5 +1,6 @@
 ---
 import type { HTMLAttributes } from "astro/types";
+import { getEntry } from "astro:content";
 import Socials from "./Socials.astro";
 import { useTranslations } from "@/i18n";
 
@@ -11,6 +12,16 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
 
 const t = useTranslations(Astro.currentLocale);
 const currentYear = new Date().getFullYear();
+const footer = await getEntry("pages", "footer");
+
+if (!footer) {
+  throw new Error(
+    "Missing content entry: `footer.md` or `footer.mdx` in `src/content/pages/`"
+  );
+}
+
+const copyrightLabel = footer.data.copyrightLabel ?? t.footer.copyright;
+const rightsText = footer.data.rightsText ?? t.footer.allRightsReserved;
 ---
 
 <footer
@@ -22,9 +33,9 @@ const currentYear = new Date().getFullYear();
   >
     <Socials />
     <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>{t.footer.copyright} &#169; {currentYear}</span>
+      <span>{copyrightLabel} &#169; {currentYear}</span>
       <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>{t.footer.allRightsReserved}</span>
+      <span>{rightsText}</span>
     </div>
   </div>
 </footer>

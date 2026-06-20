@@ -73,6 +73,46 @@ export default config({
     }),
   },
   singletons: {
+    home: singleton({
+      label: "首頁",
+      path: "src/content/pages/home",
+      format: { contentField: "content" },
+      entryLayout: "content",
+      schema: {
+        title: fields.text({ label: "標題" }),
+        description: fields.text({
+          label: "描述",
+          multiline: true,
+        }),
+        content: fields.markdoc({
+          label: "首頁文字",
+          extension: "md",
+        }),
+      },
+    }),
+    footer: singleton({
+      label: "Footer",
+      path: "src/content/pages/footer",
+      format: { contentField: "content" },
+      schema: {
+        title: fields.text({
+          label: "內部標題",
+          defaultValue: "Footer",
+        }),
+        copyrightLabel: fields.text({
+          label: "Copyright 前綴",
+          defaultValue: "Copyright",
+        }),
+        rightsText: fields.text({
+          label: "右側文字",
+          defaultValue: "All rights reserved.",
+        }),
+        content: fields.markdoc({
+          label: "備註",
+          extension: "md",
+        }),
+      },
+    }),
     about: singleton({
       label: "關於頁",
       path: "src/content/pages/about",

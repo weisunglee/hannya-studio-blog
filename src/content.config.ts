@@ -35,11 +35,13 @@ function parseSiteLocalDate(value: unknown) {
       String(value.getUTCSeconds()).padStart(2, "0"),
     ].join(":");
 
-    return dayjs.tz(
-      `${localDateTime}T${localTime}.${String(value.getUTCMilliseconds()).padStart(3, "0")}`,
-      "YYYY-MM-DDTHH:mm:ss.SSS",
-      config.site.timezone
-    ).toDate();
+    return dayjs
+      .tz(
+        `${localDateTime}T${localTime}.${String(value.getUTCMilliseconds()).padStart(3, "0")}`,
+        "YYYY-MM-DDTHH:mm:ss.SSS",
+        config.site.timezone
+      )
+      .toDate();
   }
 
   if (typeof value === "string") {
@@ -83,6 +85,8 @@ const pages = defineCollection({
     description: z.string().optional(),
     ogImage: z.string().optional(),
     canonicalURL: z.string().optional(),
+    copyrightLabel: z.string().optional(),
+    rightsText: z.string().optional(),
   }),
 });
 

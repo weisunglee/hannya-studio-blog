@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
@@ -23,9 +23,18 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
+const home = await getEntry("pages", "home");
+
+if (!home) {
+  throw new Error(
+    "Missing content entry: `home.md` or `home.mdx` in `src/content/pages/`"
+  );
+}
+
+const { Content: HomeContent } = await render(home);
 ---
 
-<Layout>
+<Layout title={home.data.title} description={home.data.description}>
   <Header />
   <main
     id="main-content"
@@ -37,7 +46,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
       <h1
         class="brand-title my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl"
       >
-        only26k's blog
+        {home.data.title}
       </h1>
       <a
         target="_blank"
@@ -54,18 +63,9 @@ const homePath = getRelativeLocaleUrl(locale, "");
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
-        歡迎來到 only26k 的部落格,這裡記錄技術筆記、專案開發與一些雜談。
-      </p>
-      <p class="mt-2">
-        往下滑看看最新文章,或前往
-        <LinkButton
-          class="hover:text-accent underline decoration-dashed underline-offset-4"
-          href="/about"
-        >
-          關於
-        </LinkButton> 頁面認識我。
-      </p>
+      <div class="home-intro">
+        <HomeContent />
+      </div>
       {
         socials.length > 0 && (
           <div class="mt-4 flex max-sm:flex-col sm:items-center">
@@ -88,7 +88,10 @@ const homePath = getRelativeLocaleUrl(locale, "");
           ]}
         >
           <h2 class="flex items-center gap-2.5 text-2xl font-semibold tracking-wide">
-            <span class="bg-accent-2 inline-block h-6 w-1 rounded-full" aria-hidden="true"></span>
+            <span
+              class="bg-accent-2 inline-block h-6 w-1 rounded-full"
+              aria-hidden="true"
+            />
             {t.home.featured}
           </h2>
           <ul>
@@ -104,7 +107,10 @@ const homePath = getRelativeLocaleUrl(locale, "");
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
           <h2 class="flex items-center gap-2.5 text-2xl font-semibold tracking-wide">
-            <span class="bg-accent inline-block h-6 w-1 rounded-full" aria-hidden="true"></span>
+            <span
+              class="bg-accent inline-block h-6 w-1 rounded-full"
+              aria-hidden="true"
+            />
             {t.home.recentPosts}
           </h2>
           <ul>
@@ -136,3 +142,19 @@ const homePath = getRelativeLocaleUrl(locale, "");
     }
   });
 </script>
+
+<style>
+  .home-intro :global(p + p) {
+    margin-top: 0.5rem;
+  }
+
+  .home-intro :global(a) {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 4px;
+  }
+
+  .home-intro :global(a:hover) {
+    color: var(--accent);
+  }
+</style>
