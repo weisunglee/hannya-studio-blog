@@ -1,4 +1,4 @@
-import { config, fields, collection } from "@keystatic/core";
+import { config, fields, collection, singleton } from "@keystatic/core";
 
 // Keystatic runs in local mode: the admin UI (npm run dev → /keystatic) reads
 // and writes the same Markdown files Astro renders. Production build excludes
@@ -68,6 +68,31 @@ export default config({
                   .replace(/[^a-z0-9._-]/g, ""),
             },
           },
+        }),
+      },
+    }),
+  },
+  singletons: {
+    about: singleton({
+      label: "關於頁",
+      path: "src/content/pages/about",
+      format: { contentField: "content" },
+      entryLayout: "content",
+      schema: {
+        title: fields.text({ label: "標題" }),
+        description: fields.text({
+          label: "描述",
+          multiline: true,
+        }),
+        ogImage: fields.text({
+          label: "OG 圖片",
+        }),
+        canonicalURL: fields.url({
+          label: "Canonical URL",
+        }),
+        content: fields.markdoc({
+          label: "內容",
+          extension: "md",
         }),
       },
     }),
