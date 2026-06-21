@@ -1,4 +1,5 @@
 import { config, fields, collection, singleton } from "@keystatic/core";
+import { createKeystaticImageFilename } from "./src/utils/keystaticImageFilename.js";
 
 // Keystatic runs in local mode: the admin UI (npm run dev → /keystatic) reads
 // and writes the same Markdown files Astro renders. Production build excludes
@@ -61,11 +62,7 @@ export default config({
             image: {
               directory: "public/images/posts",
               publicPath: "/images/posts",
-              transformFilename: filename =>
-                filename
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")
-                  .replace(/[^a-z0-9._-]/g, ""),
+              transformFilename: createKeystaticImageFilename,
             },
           },
         }),
