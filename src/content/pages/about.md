@@ -17,7 +17,7 @@ description: 關於 only26k 與這個部落格。
 - 開發專案紀錄
 - 一些雜談
 
-這是我的社群連結 [https://linktr.ee/only26k](https://linktr.ee/only26k)
+這是我的社群[連結](https://linktr.ee/only26k)
 
 ---
 

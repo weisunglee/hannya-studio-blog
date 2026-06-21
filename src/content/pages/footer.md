@@ -1,5 +1,5 @@
 ---
 title: Footer
-copyrightLabel: Copyright
+copyrightLabel: Copyright Only26k
 rightsText: All rights reserved.
 ---
