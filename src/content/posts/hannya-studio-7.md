@@ -4,7 +4,7 @@ pubDatetime: 2026-06-22T19:59:00.000Z
 author: only26k
 description: Hannya Studio 直播小工具排版
 tags:
-  - Hannya Studio
+  - HannyaStudio
   - twitch
 featured: false
 draft: false

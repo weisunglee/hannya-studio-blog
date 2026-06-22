@@ -4,7 +4,7 @@ pubDatetime: 2026-06-22T20:24:00.000Z
 author: only26k
 description: Hannya Studio 贊助進度
 tags:
-  - Hannya Studio
+  - HannyaStudio
   - twitch
 featured: false
 draft: false

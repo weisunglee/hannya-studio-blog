@@ -4,7 +4,7 @@ pubDatetime: 2026-06-22T19:33:00.000Z
 author: only26k
 description: Hannya Studio 聊天室管理
 tags:
-  - Hannya Studio
+  - HannyaStudio
   - twitch
 featured: false
 draft: false
