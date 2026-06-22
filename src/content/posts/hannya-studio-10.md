@@ -44,3 +44,7 @@ draft: false
 調整動畫顯示的顏色。
 
 ![](/images/posts/hannya-studio-10/20260622-221218-zqkd.png)
+
+### 圖層設定
+
+參考[直播小工具排版](https://blog.only26k.com/posts/hannya-studio-7/)
