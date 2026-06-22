@@ -2,7 +2,7 @@
 title: 'Hannya Studio #4'
 pubDatetime: 2026-06-22T17:26:00.000Z
 author: only26k
-description: Hannya Studio 自動發話功能
+description: Hannya Studio 自動發話
 tags:
   - Hannya Studio
   - twitch
