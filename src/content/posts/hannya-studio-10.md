@@ -2,16 +2,16 @@
 title: 'Hannya Studio #10'
 pubDatetime: 2026-06-22T21:29:00.000Z
 author: only26k
-description: Hannya Studio 贊助通知
+description: Hannya Studio 抖內通知
 tags:
   - HannyaStudio
   - twitch
 featured: false
 draft: false
 ---
-### 啟用贊助通知以及過濾特殊符號
+### 啟用抖內通知以及過濾特殊符號
 
-啟用贊助通知是整個功能的開關，關閉就不會有贊助通知，過濾特殊符號是為了避免贊助通知的特殊符號騷擾，像是一堆無意義的符號，會造成語音訊息很冗長，聊天室通知功能是指文字聊天室通知訊息，可以自訂訊息要顯示的內容以及格式。
+啟用抖內通知是整個功能的開關，關閉就不會有抖內通知，過濾特殊符號是為了避免抖內通知的特殊符號騷擾，像是一堆無意義的符號，會造成語音訊息很冗長，聊天室通知功能是指文字聊天室通知訊息，可以自訂訊息要顯示的內容以及格式。
 
 ![](/images/posts/hannya-studio-10/20260622-215808-tlcf.png)
 
@@ -29,13 +29,13 @@ draft: false
 
 ### 動畫設定
 
-贊助通知會顯示的動畫，可以移除或是自己上傳有支援的檔案格式。
+抖內通知會顯示的動畫，可以移除或是自己上傳有支援的檔案格式。
 
 ![](/images/posts/hannya-studio-10/20260622-220702-ynn0.png)![](/images/posts/hannya-studio-10/20260622-221050-z04g.png)
 
 ### 音效設定
 
-贊助通知會放的音效，可以移除或是自己上傳有支援的檔案格式。
+抖內通知會放的音效，可以移除或是自己上傳有支援的檔案格式。
 
 ![](/images/posts/hannya-studio-10/20260622-221104-zkk2.png)![](/images/posts/hannya-studio-10/20260622-221145-miyw.png)
 

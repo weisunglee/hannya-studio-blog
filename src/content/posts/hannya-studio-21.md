@@ -9,6 +9,8 @@ tags:
 featured: false
 draft: false
 ---
+![](/images/posts/hannya-studio-21/20260710-084721-hvwo.png)
+
 ### 簽到月曆
 
 簽到月曆是讓觀眾在直播日留下簽到紀錄的模組。它會用月曆方式顯示直播日和觀眾簽到狀態，觀眾完成簽到後，OBS畫面上會播放圈選動畫。
