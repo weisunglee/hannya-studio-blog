@@ -9,6 +9,8 @@ tags:
 featured: false
 draft: false
 ---
+![](/images/posts/hannya-studio-22/20260710-084646-4711.png)
+
 ### 推薦頻道
 
 推薦頻道模組是用來處理Twitch Shoutout的自動化。當其他實況主揪團進入你的頻道時，系統可以自動送出官方Shoutout，讓聊天室看到推薦並一鍵追隨對方頻道。

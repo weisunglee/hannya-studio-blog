@@ -9,6 +9,8 @@ tags:
 featured: false
 draft: false
 ---
+![](/images/posts/hannya-studio-20/20260710-084803-a6iz.png)
+
 ### 聊天室圖層
 
 聊天室圖層是把Twitch聊天室訊息顯示到OBS畫面上的模組。觀眾留言不只會出現在Twitch聊天室，也可以直接成為直播畫面的一部分。
@@ -20,8 +22,16 @@ draft: false
 目前有三種主要版面：
 
 - 單行精簡
+
+  ![](/images/posts/hannya-studio-20/20260710-084833-oce1.png)
+
 - 訊息泡泡
+
+  ![](/images/posts/hannya-studio-20/20260710-084844-4x0o.png)
+
 - 橫向卡片
+
+  ![](/images/posts/hannya-studio-20/20260710-084902-7jkg.png)
 
 可以調整背景顏色、文字顏色、字體大小，也可以設定文字陰影、文字外框顏色和外框寬度。這些設定主要是為了讓訊息在不同直播背景上都看得清楚。
 
