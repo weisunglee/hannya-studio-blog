@@ -1,50 +1,49 @@
 ---
-title: 'Hannya Studio #10'
+title: "Hannya Studio #10"
 pubDatetime: 2026-06-22T21:29:00.000Z
 author: only26k
-description: Hannya Studio 抖內通知
+description: Hannya Studio 抖內通知：調整通知文字、中文語音、動畫與音效。
 tags:
   - HannyaStudio
   - twitch
 featured: false
 draft: false
 ---
-### 啟用抖內通知以及過濾特殊符號
 
-啟用抖內通知是整個功能的開關，關閉就不會有抖內通知，過濾特殊符號是為了避免抖內通知的特殊符號騷擾，像是一堆無意義的符號，會造成語音訊息很冗長，聊天室通知功能是指文字聊天室通知訊息，可以自訂訊息要顯示的內容以及格式。
+### 開啟通知
+
+「啟用贊助通知」控制直播畫面上的通知。聊天室的文字提醒有自己的開關，也能自訂內容與格式。
+
+語音遇到一長串特殊符號，可能會唸得很久。「過濾特殊符號」就是用來減少這類干擾。
 
 ![](/images/posts/hannya-studio-10/20260622-215808-tlcf.png)
 
-### 語音設定
+### 選擇語音
 
-可以設定語音聲線，目前只能設定中文語系聲線，也可以設定音量跟語速，語音不支援OBS瀏覽器的擷取音訊功能，所以無法獨立音軌輸出，這是OBS的限制，目前沒有解法，只能用原始的聲音來源輸出。
+可以調整聲線、音量和語速。聲線選單使用瀏覽器提供的本機繁體中文語音，能選到哪些聲音，會受裝置環境影響。
+
+這篇初版使用時，語音無法透過 OBS 瀏覽器來源的擷取音訊功能獨立輸出音軌，只能從原本的聲音來源收音。若需要分軌，請在自己的 OBS 環境先測試一次；這項限制不能只從後台預覽判斷。
 
 ![](/images/posts/hannya-studio-10/20260622-220114-txb3.png)
 
 ### 訊息格式
 
-這是文字訊息以及語音通用的格式，文字會使用下面的格式顯示在聊天室以及動畫，語音也會照下面的訊息格式唸出來。
+訊息模板同時用於通知文字與語音。設定好後，聊天室、動畫中的文字和語音朗讀會依模板產生內容。
 
 ![](/images/posts/hannya-studio-10/20260622-220449-i9gy.png)
 
-### 動畫設定
+### 動畫與音效
 
-抖內通知會顯示的動畫，可以移除或是自己上傳有支援的檔案格式。
+可以移除通知動畫，或上傳頁面支援的圖片格式。音效也能移除或換成自己的檔案。
 
-![](/images/posts/hannya-studio-10/20260622-220702-ynn0.png)![](/images/posts/hannya-studio-10/20260622-221050-z04g.png)
+![](/images/posts/hannya-studio-10/20260622-220702-ynn0.png)
+![](/images/posts/hannya-studio-10/20260622-221050-z04g.png)
 
-### 音效設定
+![](/images/posts/hannya-studio-10/20260622-221104-zkk2.png)
+![](/images/posts/hannya-studio-10/20260622-221145-miyw.png)
 
-抖內通知會放的音效，可以移除或是自己上傳有支援的檔案格式。
-
-![](/images/posts/hannya-studio-10/20260622-221104-zkk2.png)![](/images/posts/hannya-studio-10/20260622-221145-miyw.png)
-
-### 顏色設定
-
-調整動畫顯示的顏色。
+外觀顏色在樣式設定調整。圖層的位置和尺寸則到[直播小工具排版](https://blog.only26k.com/posts/hannya-studio-7/)設定。
 
 ![](/images/posts/hannya-studio-10/20260622-221218-zqkd.png)
 
-### 圖層設定
-
-參考[直播小工具排版](https://blog.only26k.com/posts/hannya-studio-7/)
+2026-09-09 更新：目前設定頁已將外觀、音訊與通知文字分頁整理，語音選單列出本機 zh-TW 聲線。本文截圖為初版介面。
